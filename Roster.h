@@ -25,16 +25,14 @@ private:
         int rosterSize;
         int rosterCapacity;
 
-Student * classRosterArray = new Student[rosterCapacity]; 
-       // string classRosterArray[];
+        // ***** Create a Array of poitners to the Array
+        Student *classRosterArray[5]; 
+      
 
 public:
-
-   
-
     Roster(int maxCapacity);
 
-    //~Roster();
+    ~Roster();
     void Parse(string data);
     
     void loadData(const string inStudentData[], int CurrentDataSize);
@@ -42,12 +40,12 @@ public:
     string * splitStudentStringIntoArray(string inputString);
 
     //The following is important to define the functions that are used.
-    void add(string studentId, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram);
-    // void remove(string studentId);
-    // void printAll();
-    // void printAverageDaysInCourse(string studentId);
-    // void printInvalidEmails();
-    // void printByDegreeProgram(DegreeProgram degreeProgram);
+    void add(int Index, string studentId, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram);
+    void remove(string studentId);
+    void printAll();
+    void printAverageDaysInCourse(string studentId);
+    void printInvalidEmails();
+    void printByDegreeProgram(DegreeProgram degreeProgram);
         
 };
 #endif /* Roster_h */

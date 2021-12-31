@@ -10,6 +10,7 @@
 #include <iostream>
 using namespace std;
 
+
 Student::Student(string studentId, string firstName, string lastName, string emailAddress, int age, int daysToComplete[], DegreeProgram degreeProgram)
 
 //this is for 'D.1' in the ruberic. The following has each variable needed.
@@ -25,6 +26,9 @@ this->daysToComplete = new int[NUMCOURSES];
 }
 this->degreeProgram = degreeProgram;
 }
+Student::Student()
+{}
+
             //GETTER (2.a in the Ruberic)
 string Student::GetstudentId() {
     return studentId;
